@@ -15,9 +15,11 @@
     }
 
     a {
-        color: #5ab4ed; 
+        font-weight: bold;
+        color: #746799; 
         text-decoration: none;  
     }
+
 
     .titlepage {
         width: 100%;
@@ -59,17 +61,43 @@
     }
 
     .content-box h1 { margin: 0 0 10px 0; }
-    .content-box p {
-     margin: 0px;
-     
-     }
+    .content-box p { margin: 0px; }
 
+    /* Sidebar Layout */
     .sidebar {
         display: flex;
         flex-direction: column;
-        /* Gap is 0 so the title and links touch */
         gap: 0px; 
     }
+
+    .nav-title {
+        width: 180px;
+        padding: 0px 0px;
+        border: 3px solid #6ead89;
+        background-color: #e4ffda;
+        border-radius: 10px 10px 0 0;
+        color: #6ead89;    
+        box-sizing: border-box;
+        text-align: center;
+        font-weight: 700;
+    }
+    .nav-title p {
+        margin: 5px 0;
+    }
+
+    .nav-links {
+        width: 180px;
+        padding: 10px;
+        border: 3px solid #6ead89;
+        border-radius: 0 0 10px 10px; 
+        background-color: #e4ffda;
+        border-top: none; 
+        box-sizing: border-box;
+        margin-bottom: 15px; /
+    }
+
+    .nav-links p { margin: 5px 0; font-size: 0.95rem; }
+    .nav-links a { color: #6ead89; font-weight: bold; }
 
     .linktitle {
         width: 180px;
@@ -95,9 +123,12 @@
     .links p { margin: 5px 0; font-size: 0.95rem; }
     .linktitle p { margin: 0; font-weight: 700; font-size: 1rem; }
 
+    /* mobile */
     @media (max-width: 800px) {
         .container { flex-direction: column; align-items: center; }
         .titlepage, .content-box { width: 95%; }
+        .sidebar { width: 95%; align-items: center; }
+        .nav-title, .nav-links, .linktitle, .links { width: 100%; }
     }
     </style>
 </head>
@@ -109,20 +140,28 @@
 
     <div class="container">
         <div class="content-box">
-            <h1>〈 Homepage 〉</h1>
+            <h1>〈 Homepage 〉</h1>
             <p>Welcome to my personal website. I usually just put random stuff here so you can look at that if you want to.</p>
             <br>
-            <p><strong>interests  :</strong></p>
-            <p>1. video games<br>2. coding<br>3. puzzle games<br>4. math<br>5. doomscrolling</p>
+            <p><strong>Interests  :</strong></p>
+            <p>1. video games<br>2. math<br>3. puzzle games<br>4. coding<br>5. doomscrolling</p>
         </div>
 
         <div class="sidebar">
+            <div class="nav-title">
+                <p> Navigation ➣</p>
+            </div>
+            <div class="nav-links">
+                <p><a href="index.html">❖ Home</a></p>
+                <p><a href="blogs.html">❖ Blog</a></p>
+            </div>
+
             <div class="linktitle">
-                <p>Some Links 🔗</p>
+                <p>Some Links 🖇</p>
             </div>
             <div class="links">
-                <p><a href="https://www.instagram.com/zolt4n_24/" target="_blank">❖ instagram</a></p>
-                <p><a href="https://artofproblemsolving.com" target="_blank">❖ mathlinks.ro</a></p>
+                <p><a href="https://www.instagram.com/zolt4n_24/" target="_blank">❖ Instagram</a></p>
+                <p><a href="https://artofproblemsolving.com" target="_blank">❖ AOPS</a></p>
             </div>
         </div>
     </div>
